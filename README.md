@@ -70,6 +70,20 @@ The CNN model used for digit classification includes Batch Normalization and Dro
 ./models/model6/digit_classification_cnn_with_BatchNormalizationAndDropout_2.h5
 ```
 
+### Model Architecture
+
+Inspired from LeNet-5 architecture, this model uses a combination of Convolutional layers, Batch Normalization, Average Pooling, and Dropout:
+
+1. **Batch Normalization**: It was applied after each dense and convolutional layer to normalize the inputs, which helped in:
+   - Stabilizing the learning process i.e., 
+   - Allowing higher learning rates, without worrying too much about vanishing and exploding gradients.
+   - Reducing the sensitivity to weight initialization so that we do not have to worry about fine-tuning initialization techniques.
+
+2. **Dropout**: Applied in the dense layers (with a rate of 0.5) to:
+   - Prevent overfitting by randomly setting a fraction of input units to 0 during training
+   - Improve generalization by reducing the model's reliance on specific features
+
+
 ### Model Performance
 
 ![Screenshot 2024-09-21 at 2 15 25 AM](https://github.com/user-attachments/assets/a304860b-a5e4-4ecc-ac0c-fcb196501a8c)

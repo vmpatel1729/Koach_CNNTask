@@ -1,7 +1,7 @@
 import tensorflow as tf
 from PIL import Image
 import numpy as np
-model = tf.keras.models.load_model("./models/model6/digit_classification_cnn_with_BatchNormalizationAndDropout_2.h5")
+model = tf.keras.models.load_model("./models/digit_classification_cnn_with_BatchNormalizationAndDropout_2.h5")
 
 image_path = "./images/8.jpeg" 
 image = Image.open(image_path).convert("L") 
